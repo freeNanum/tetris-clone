@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>캐주얼 테트리스</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>캐주얼 테트리스</h1>
+      <button id="pause-btn" class="icon-btn" aria-label="일시정지">⏸</button>
+    </header>
+
+    <main class="game-layout">
+      <aside class="side-panel side-panel--left">
+        <div class="panel-box">
+          <h2>HOLD</h2>
+          <canvas id="hold-canvas" width="120" height="120"></canvas>
+        </div>
+        <div class="panel-box stats">
+          <div class="stat-row"><span>SCORE</span><strong id="score-value">0</strong></div>
+          <div class="stat-row"><span>LEVEL</span><strong id="level-value">0</strong></div>
+          <div class="stat-row"><span>LINES</span><strong id="lines-value">0</strong></div>
+          <div class="stat-row"><span>BEST</span><strong id="highscore-value">0</strong></div>
+        </div>
+      </aside>
+
+      <div class="board-wrapper">
+        <canvas id="board-canvas"></canvas>
+
+        <div id="start-screen" class="overlay">
+          <h2>캐주얼 테트리스</h2>
+          <p>방향키 이동 · ↑/X 회전 · Space 하드드롭 · C 홀드</p>
+          <button id="start-btn" class="primary-btn">시작하기</button>
+        </div>
+
+        <div id="pause-screen" class="overlay hidden">
+          <h2>일시정지</h2>
+          <button id="resume-btn" class="primary-btn">계속하기</button>
+        </div>
+
+        <div id="gameover-screen" class="overlay hidden">
+          <h2>게임 오버</h2>
+          <p>점수: <span id="final-score">0</span></p>
+          <button id="restart-btn" class="primary-btn">다시하기</button>
+        </div>
+      </div>
+
+      <aside class="side-panel side-panel--right">
+        <div class="panel-box">
+          <h2>NEXT</h2>
+          <canvas id="next-canvas" width="120" height="300"></canvas>
+        </div>
+      </aside>
+    </main>
+
+    <div class="touch-controls">
+      <div class="touch-group touch-group--move">
+        <button id="btn-left" class="touch-btn" aria-label="왼쪽">◀</button>
+        <button id="btn-right" class="touch-btn" aria-label="오른쪽">▶</button>
+      </div>
+      <div class="touch-group touch-group--action">
+        <button id="btn-hold" class="touch-btn small" aria-label="홀드">HOLD</button>
+        <button id="btn-softdrop" class="touch-btn" aria-label="소프트드롭">▼</button>
+        <button id="btn-rotate" class="touch-btn" aria-label="회전">⟳</button>
+        <button id="btn-harddrop" class="touch-btn small" aria-label="하드드롭">DROP</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

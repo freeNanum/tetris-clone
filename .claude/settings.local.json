@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"d:/WORK9/Tetris/js\" \"d:/WORK9/Tetris/css\" \"d:/WORK9/Tetris/assets/sfx\" \"d:/WORK9/Tetris/assets/fonts\")",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(command -v chromium-cli)",
+      "Bash(command -v npx)",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(mkdir -p /c/Users/poffi/AppData/Local/Temp/claude/d--WORK9-Tetris/1ca0e860-1060-4762-9c6c-a1220d3d5c36/scratchpad/pw-test)",
+      "Read(//c/Users/poffi/AppData/Local/Temp/claude/d--WORK9-Tetris/1ca0e860-1060-4762-9c6c-a1220d3d5c36/scratchpad/**)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Read(//c/Users/poffi/AppData/Local/Temp/claude/d--WORK9-Tetris/1ca0e860-1060-4762-9c6c-a1220d3d5c36/scratchpad/pw-test/**)",
+      "Bash(npx playwright *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(node test.js)",
+      "Bash(pkill -f \"http.server 8834\")",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8834 -ErrorAction SilentlyContinue)",
+      "PowerShell($pid = \\(Get-NetTCPConnection -LocalPort 8834\\).OwningProcess | Select-Object -First 1; Stop-Process -Id $pid -Force; Start-Sleep -Milliseconds 500; Get-NetTCPConnection -LocalPort 8834 -ErrorAction SilentlyContinue)",
+      "PowerShell($procId = \\(Get-NetTCPConnection -LocalPort 8834\\).OwningProcess | Select-Object -First 1; Stop-Process -Id $procId -Force; Start-Sleep -Milliseconds 500; Get-NetTCPConnection -LocalPort 8834 -ErrorAction SilentlyContinue; Write-Output \"done\")",
+      "Bash(command -v node)",
+      "Bash(command -v python)"
+    ],
+    "additionalDirectories": [
+      "d:\\WORK9\\Tetris"
+    ]
+  }
+}
